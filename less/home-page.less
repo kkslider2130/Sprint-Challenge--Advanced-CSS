@@ -1,29 +1,35 @@
 // Home Content
 
 .home {
-
   .intro {
-
     h2 {
       padding: 15px;
     }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    .hide {
+      @media @mobile {
+        display: none;
+      }
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+
+      @media @mobile {
+        width: 94%;
+      }
     }
   }
 
@@ -45,9 +51,16 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @mobile {
+      flex-direction: column-reverse;
+      padding: 20px 0px 0px 15px;
+    }
 
     .walk-text {
       width: 50%;
+      @media @mobile {
+        width: 94%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,13 +71,24 @@
       }
 
       .btn {
+        .myBtn(1rem 0rem, 1.4rem, 25%);
+        @media @mobile {
+          width: 100%;
+          padding: 2rem 0rem;
+          margin-left: 0.5rem;
+          margin-bottom: 3rem;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+      @media @mobile {
+        width: 94%;
+        margin: 0 0 6% 0;
+      }
+
       img {
         width: 100%;
         height: auto;
@@ -72,4 +96,4 @@
       }
     }
   }
-}// home
+} // home
